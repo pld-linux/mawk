@@ -1,0 +1,17 @@
+--- mawk-1.3.3.orig/configure.in	Mon Oct 16 13:25:00 1995
++++ mawk-1.3.3/configure.in	Sun Nov 11 14:42:20 2001
+@@ -41,7 +41,13 @@
+ COMPILER_ATTRIBUTES
+ WHERE_SIZE_T
+ CHECK_HEADERS(fcntl.h,errno.h, time.h,stdarg.h)
+-CHECK_FUNCTIONS(memcpy,strchr,strerror,vfprintf,strtod,fmod,matherr)
++CHECK_FUNCTIONS(memcpy)
++CHECK_FUNCTIONS(strchr)
++CHECK_FUNCTIONS(strerror)
++CHECK_FUNCTIONS(vfprintf)
++CHECK_FUNCTIONS(strtod)
++CHECK_FUNCTIONS(fmod)
++CHECK_FUNCTIONS(matherr)
+ FPRINTF_IN_STDIO
+ FIND_OR_COMPUTE_MAX__INT
+ DREADED_FPE_TESTS

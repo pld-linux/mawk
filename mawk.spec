@@ -5,12 +5,12 @@ Summary(pl):	Interpreter jêzyka programowania awk
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	14
+Release:	15
 Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
-Source:		ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
-Patch:		mawk-fix_mawk_path.patch
+Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
+#Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,7 +46,7 @@ durumlarda Linux un standart awk programý olan gawk'dan daha üstündür.
 
 %prep
 %setup -q
-%patch -p1
+#%patch0 -p1
 
 %build
 LDFLAGS="-s"; export LDFLAGS
@@ -69,6 +69,7 @@ mv examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README \
 	$RPM_BUILD_ROOT%{_mandir}/man1/*
+ln -s mawk.1.gz $RPM_BUILD_ROOT%{_mandir}/man1/awk.1.gz
 
 %clean
 rm -rf $RPM_BUILD_ROOT

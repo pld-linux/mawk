@@ -1,3 +1,6 @@
+#
+# --with smath - links libm statically (its smaller than mawk+libm)
+#
 Summary:	An interpreter for the awk programming language
 Summary(de):	Mikes neuer Posix AWK-Interpretierer
 Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK
@@ -14,6 +17,7 @@ Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 Provides:	awk
+%{!?bcond_off_smath:BuildRequires: glibc-static}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
@@ -54,7 +58,7 @@ Bazý durumlarda Linux un standart awk programý olan gawk'dan daha
 %build
 autoconf
 %configure
-%{__make}
+%{__make} %{!?bcond_off_smath:MATHLIB=/usr/lib/libm.a}
 
 %install
 rm -rf $RPM_BUILD_ROOT

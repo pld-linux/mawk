@@ -641,7 +641,7 @@ tablica zaindeksowana zmiennymi ¶rodowiska. £añcuch ¶rodowiska,
 nazwa bie¿±cego pliku wej¶ciowego.
 .TP
 .B FNR
-numer nie¿±cego rekordu w
+numer bie¿±cego rekordu w
 .BR FILENAME .
 .TP
 .B FS

@@ -1,4 +1,5 @@
 Summary:	An interpreter for the awk programming language.
+Summary(pl):	Interpreter jêzyka programowania awk.
 Name:		mawk
 Version:	1.2.2
 Release:	12
@@ -16,6 +17,9 @@ sometimes outperform gawk, the standard awk program for Linux.  Mawk
 conforms to the POSIX 1003.2 (draft 11.3) definition of awk.
 
 You should install mawk if you use awk.
+
+%description -l pl
+Mawk jest wersj± interpretera jêzyka programowania awk.
 
 %prep
 %setup -q

@@ -78,8 +78,8 @@ mv mawk mawk.BOOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/bin}
-install -d $RPM_BUILD_ROOT/usr/lib/bootdisk/am/bin
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/bin} \
+	$RPM_BUILD_ROOT/usr/lib/bootdisk/bin
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \

@@ -99,7 +99,7 @@ Wersja awka na bootkietkê.
 %build
 autoupdate mawk.ac.m4
 autoupdate configure.in
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %if %{?BOOT:1}%{!?BOOT:0}

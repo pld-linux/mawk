@@ -3,7 +3,7 @@ diff -Nru mawk-1.3.3/examples/ct_length.awk mawk-1.3.3.new/examples/ct_length.aw
 +++ mawk-1.3.3.new/examples/ct_length.awk	Wed Feb  9 07:56:44 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/mawk -f
-+#!/usr/bin/mawk -f
++#!/bin/mawk -f
  
  #  ct_length.awk
  #
@@ -12,7 +12,7 @@ diff -Nru mawk-1.3.3/examples/hcal mawk-1.3.3.new/examples/hcal
 +++ mawk-1.3.3.new/examples/hcal	Wed Feb  9 07:56:55 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/mawk -We
-+#!/usr/bin/mawk -We
++#!/bin/mawk -We
  # edit the above to be the full pathname of 'mawk'
  # @(#) hcal - v01.00.02 - Tue Feb 27 21:21:21 EST 1996
  # @(#) prints a 3-month (highlighted) calendar centered on the target month

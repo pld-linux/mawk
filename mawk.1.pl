@@ -454,7 +454,7 @@ Zatem pasuje do niego dowolny ³añcuch na pocz±tku, koñcu i pomiêdzy dowolnym
 znakiem. Na przyk³ad,
 .nf
 .sp
-	echo  abc | mawk { gsub(//, "X") ; print }
+	echo  abc | mawk '{ gsub(//, "X") ; print }'
 	XaXbXcX
 .sp
 .fi

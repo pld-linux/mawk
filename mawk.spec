@@ -91,7 +91,7 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 mv examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/am/bin/awk
+install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/bin/awk
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README
 
@@ -108,4 +108,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files BOOT
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/lib/bootdisk/am/bin/awk
+%attr(755,root,root) /usr/lib/bootdisk/bin/awk

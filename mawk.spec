@@ -1,6 +1,3 @@
-#
-# --with smath - links libm statically (its smaller than mawk+libm)
-#
 Summary:	An interpreter for the awk programming language
 Summary(de):	Mikes neuer Posix AWK-Interpretierer
 Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK
@@ -17,10 +14,11 @@ Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_mawk_path.patch
+Patch1:		%{name}-ac-workaround.patch
 Provides:	/bin/awk
 Provides:	awk
 BuildRequires:	autoconf
-BuildRequires:	glibc-static
+%{?BOOT:BuildRequires:	glibc-static}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
@@ -71,26 +69,28 @@ Bootdisk awk version.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 autoconf
 %configure
+%if %{?BOOT:1}%{!?BOOT:0}
 %{__make} MATHLIB=/usr/lib/libm.a
 mv -f mawk mawk.BOOT
 %{__make} clean
+%endif
 %{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/%{name},/bin} \
-	$RPM_BUILD_ROOT/usr/lib/bootdisk/bin
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/%{name},/bin}
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
 
-ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
+ln -sf mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1/mawk.1
@@ -98,7 +98,10 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 
 mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
+%if %{?BOOT:1}%{!?BOOT:0}
+install -d $RPM_BUILD_ROOT/usr/lib/bootdisk/bin
 install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/bin/awk
+%endif
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README
 
@@ -112,8 +115,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /bin/awk
 %{_examplesdir}/%{name}
 %{_mandir}/man1/*
-%lang(pl) %{_mandir}/man1/*
+%lang(pl) %{_mandir}/pl/man1/*
 
+%if %{?BOOT:1}%{!?BOOT:0}
 %files BOOT
 %defattr(644,root,root,755)
 %attr(755,root,root) /usr/lib/bootdisk/bin/awk
+%endif

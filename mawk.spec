@@ -7,7 +7,7 @@ Summary(pt_BR):	Novo interpretador (Posix) AWK do Mike
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	21
+Release:	22
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text

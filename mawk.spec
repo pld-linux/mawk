@@ -54,7 +54,7 @@ Bazý durumlarda Linux un standart awk programý olan gawk'dan daha
 LDFLAGS="-s"; export LDFLAGS
 autoconf
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

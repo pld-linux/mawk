@@ -17,7 +17,7 @@ Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 Provides:	awk
-%{?bcond_on_smath:BuildRequires: glibc-static}
+BuildRequires:	glibc-static
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
@@ -51,6 +51,19 @@ Mawk, çok güçlü bir metin iþleme programý olan awk'ýn bir sürümüdür.
 Bazý durumlarda Linux un standart awk programý olan gawk'dan daha
 üstündür.
 
+%package BOOT
+Summary:	An interpreter for the awk programming language - BOOT
+Summary(de):	Mikes neuer Posix AWK-Interpretierer - BOOT
+Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK - BOOT
+Summary(pl):	Interpreter jêzyka programowania awk - BOOT
+Summary(tr):	Posix AWK Yorumlayýcýsý - BOOT
+Group:		Utilities/Text
+Group(fr):	Utilitaires/Texte
+Group(pl):	Narzêdzia/Tekst
+
+%description BOOT
+Bootdisk awk version.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -58,11 +71,15 @@ Bazý durumlarda Linux un standart awk programý olan gawk'dan daha
 %build
 autoconf
 %configure
-%{__make} %{?bcond_on_smath:MATHLIB=/usr/lib/libm.a}
+%{__make} MATHLIB=/usr/lib/libm.a
+mv mawk mawk.BOOT
+%{__make} clean
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/bin}
+install -d $RPM_BUILD_ROOT/usr/lib/bootdisk/am/bin
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
@@ -73,6 +90,8 @@ ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 mv examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+
+install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/am/bin/awk
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README
 
@@ -86,3 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /bin/awk
 %{_examplesdir}/%{name}
 %{_mandir}/man1/*
+
+%files BOOT
+%defattr(644,root,root,755)
+%attr(755,root,root) /usr/lib/bootdisk/am/bin/awk

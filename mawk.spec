@@ -138,11 +138,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ACKNOWLEDGMENT CHANGES README
-%doc %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/mawk
 %attr(755,root,root) /bin/awk
 %{_mandir}/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
+%{_examplesdir}/%{name}-%{version}
 
 %if %{?BOOT:1}%{!?BOOT:0}
 %files BOOT

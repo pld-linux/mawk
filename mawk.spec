@@ -10,9 +10,6 @@ Version:	1.3.3
 Release:	22
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
@@ -71,9 +68,6 @@ Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK - BOOT
 Summary(pl):	Interpreter jêzyka programowania awk - BOOT
 Summary(tr):	Posix AWK Yorumlayýcýsý - BOOT
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 
 %description BOOT
 Bootdisk awk version.

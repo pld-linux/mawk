@@ -4,10 +4,12 @@ Summary(es):	Nuevo interpretador (Posix) AWK del Mike
 Summary(fr):	Mike's New/Posix AWK Interpreter : interprИteur AWK
 Summary(pl):	Interpreter jЙzyka programowania awk
 Summary(pt_BR):	Novo interpretador (Posix) AWK do Mike
+Summary(ru):	Интерпретатор языка программирования awk
 Summary(tr):	Posix AWK YorumlayЩcЩsЩ
+Summary(uk):	╤нтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.3
-Release:	22
+Release:	23
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
@@ -56,10 +58,23 @@ Mawk И uma versЦo do awk, que И um poderoso programa processador de
 texto. Em algumas Аreas mawk pode superar gawk, que И o programa awk
 padrЦo do Linux.
 
+%description -l ru
+Mawk - это версия языка программирования awk, мощного инструмента для
+обработки текста. Mawk имеет улучшенную реализацию некоторых
+возможностей awk и иногда быстрее gawk, стандартной программы awk для
+Linux. Mawk соответствует POSIX 1003.2 (draft 11.3) определению языка
+awk.
+
 %description -l tr
 Mawk, Гok gЭГlЭ bir metin iЧleme programЩ olan awk'Щn bir sЭrЭmЭdЭr.
 BazЩ durumlarda Linux un standart awk programЩ olan gawk'dan daha
 ЭstЭndЭr.
+
+%description -l uk
+Mawk - це верс╕я мови програмування awk, потужного ╕нструменту для
+обробки тексту. Mawk ма╓ покращену реал╕зац╕ю деяких можливостей awk ╕
+╕нод╕ швидший за gawk, стандартну програму awk для Linux. Mawk
+в╕дпов╕да╓ POSIX 1003.2 (draft 11.3) визначенню мови awk.
 
 %package BOOT
 Summary:	An interpreter for the awk programming language - BOOT
@@ -108,8 +123,8 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %if %{?BOOT:1}%{!?BOOT:0}
-install -d $RPM_BUILD_ROOT/usr/lib/bootdisk/bin
-install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/bin/awk
+install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
+install mawk.BOOT $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/awk
 %endif
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README
@@ -129,5 +144,5 @@ rm -rf $RPM_BUILD_ROOT
 %if %{?BOOT:1}%{!?BOOT:0}
 %files BOOT
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/lib/bootdisk/bin/awk
+%attr(755,root,root) %{_libdir}/bootdisk/bin/awk
 %endif

@@ -96,7 +96,7 @@ Wersja awka na bootkietkê.
 %patch1 -p1
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %if %{?BOOT:1}%{!?BOOT:0}
 %{__make} MATHLIB=/usr/lib/libm.a

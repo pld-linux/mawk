@@ -9,7 +9,7 @@ Summary(tr):	Posix AWK YorumlayЩcЩsЩ
 Summary(uk):	╤нтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.3
-Release:	23
+Release:	24
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
@@ -107,7 +107,7 @@ mv -f mawk mawk.BOOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/%{name},/bin}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/%{name}-%{version},/bin}
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
@@ -120,24 +120,22 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1/mawk.1
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 
-mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %if %{?BOOT:1}%{!?BOOT:0}
 install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
 install mawk.BOOT $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/awk
 %endif
 
-gzip -9nf ACKNOWLEDGMENT CHANGES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ACKNOWLEDGMENT CHANGES README
+%doc %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/mawk
 %attr(755,root,root) /bin/awk
-%{_examplesdir}/%{name}
 %{_mandir}/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
 

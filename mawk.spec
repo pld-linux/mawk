@@ -8,14 +8,14 @@ Summary(pl):	Interpreter jêzyka programowania awk
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	19
+Release:	20
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
-Patch0:		mawk-fix_mawk_path.patch
+Patch0:		%{name}-fix_mawk_path.patch
 Provides:	/bin/awk
 Provides:	awk
 BuildRequires:	autoconf

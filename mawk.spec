@@ -13,6 +13,7 @@ Release:	29
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
+# Source0-md5: ad46743641924e1234b2bfba92641085
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 Patch1:		%{name}-ac-ac.patch

@@ -13,6 +13,7 @@ Group(pl):	Narzêdzia/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
+Provides:	awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
@@ -65,7 +66,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,/usr/src/examples/%{name},
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
 
-ln -s %{_bindir}/mawk $RPM_BUILD_ROOT/bin/awk
+ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 mv examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}

@@ -7,6 +7,7 @@ Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
 Source:		ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
+Provides:	awk
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description

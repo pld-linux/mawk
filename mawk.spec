@@ -8,13 +8,14 @@ Summary(pl):	Interpreter jêzyka programowania awk
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	20
+Release:	21
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
+Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_mawk_path.patch
 Provides:	/bin/awk
 Provides:	awk
@@ -81,7 +82,7 @@ mv -f mawk mawk.BOOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/bin} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/%{name},/bin} \
 	$RPM_BUILD_ROOT/usr/lib/bootdisk/bin
 
 %{__make} install \
@@ -91,6 +92,9 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/b
 
 ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1/mawk.1
+echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 
 mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
@@ -108,6 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /bin/awk
 %{_examplesdir}/%{name}
 %{_mandir}/man1/*
+%lang(pl) %{_mandir}/man1/*
 
 %files BOOT
 %defattr(644,root,root,755)

@@ -10,13 +10,15 @@ Name:		mawk
 Version:	1.3.3
 Release:	19
 License:	GPL
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 Provides:	awk
+BuildRequires:	autoconf
 BuildRequires:	glibc-static
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,9 +59,10 @@ Summary(de):	Mikes neuer Posix AWK-Interpretierer - BOOT
 Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK - BOOT
 Summary(pl):	Interpreter jêzyka programowania awk - BOOT
 Summary(tr):	Posix AWK Yorumlayýcýsý - BOOT
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 
 %description BOOT
 Bootdisk awk version.
@@ -72,7 +75,7 @@ Bootdisk awk version.
 autoconf
 %configure
 %{__make} MATHLIB=/usr/lib/libm.a
-mv mawk mawk.BOOT
+mv -f mawk mawk.BOOT
 %{__make} clean
 %{__make} 
 
@@ -89,7 +92,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/b
 ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
-mv examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 install mawk.BOOT $RPM_BUILD_ROOT/usr/lib/bootdisk/bin/awk
 

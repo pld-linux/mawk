@@ -5,7 +5,7 @@ Summary(pl):	Interpreter jêzyka programowania awk
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	16
+Release:	17
 License:	GPL
 Group:		Utilities/Text
 Group(fr):	Utilitaires/Texte
@@ -58,7 +58,7 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,/usr/src/examples/%{name},/bin}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name},/bin}
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
@@ -68,7 +68,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,/usr/src/examples/%{name},
 ln -s mawk $RPM_BUILD_ROOT%{_bindir}/awk
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
-mv examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+mv examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README
 
@@ -80,5 +80,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/mawk
 %attr(755,root,root) /bin/awk
-/usr/src/examples/%{name}
+%{_examplesdir}/%{name}
 %{_mandir}/man1/*

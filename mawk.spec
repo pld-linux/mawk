@@ -78,6 +78,9 @@ Group(pl):	Aplikacje/Tekst
 %description BOOT
 Bootdisk awk version.
 
+%description BOOT -l pl
+Wersja awka na bootkietkê.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -91,7 +94,7 @@ autoconf
 mv -f mawk mawk.BOOT
 %{__make} clean
 %endif
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

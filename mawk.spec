@@ -5,7 +5,7 @@ Summary(pl):	Interpreter jêzyka programowania awk
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
-Release:	13
+Release:	14
 Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
@@ -13,6 +13,8 @@ Source:		ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_exec_prefix	/
 
 %description
 Mawk is a version of the awk programming language.  Awk interprets a 

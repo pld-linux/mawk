@@ -12,7 +12,7 @@ Group(pl):	Narzêdzia/Tekst
 Source:		ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch:		mawk-fix_mawk_path.patch
 Provides:	awk
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Mawk is a version of the awk programming language.  Awk interprets a 

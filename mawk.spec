@@ -9,7 +9,7 @@ Summary(tr):	Posix AWK YorumlayЩcЩsЩ
 Summary(uk):	╤нтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.3
-Release:	30
+Release:	31
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz

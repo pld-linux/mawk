@@ -52,7 +52,6 @@ Bazý durumlarda Linux un standart awk programý olan gawk'dan daha
 %patch0 -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 autoconf
 %configure
 %{__make}
@@ -71,8 +70,7 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 mv examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
-gzip -9nf ACKNOWLEDGMENT CHANGES README \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf ACKNOWLEDGMENT CHANGES README
 
 %clean
 rm -rf $RPM_BUILD_ROOT

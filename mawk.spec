@@ -10,7 +10,7 @@ Copyright:	GPL
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
-#Patch0:		mawk-fix_mawk_path.patch
+Patch0:		mawk-fix_mawk_path.patch
 Provides:	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,7 +46,7 @@ durumlarda Linux un standart awk programý olan gawk'dan daha üstündür.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
 LDFLAGS="-s"; export LDFLAGS

@@ -64,12 +64,12 @@ make install \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
 
 ln -s %{_bindir}/mawk $RPM_BUILD_ROOT/bin/awk
+echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 
 mv examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
 gzip -9nf ACKNOWLEDGMENT CHANGES README \
 	$RPM_BUILD_ROOT%{_mandir}/man1/*
-ln -s mawk.1.gz $RPM_BUILD_ROOT%{_mandir}/man1/awk.1.gz
 
 %clean
 rm -rf $RPM_BUILD_ROOT

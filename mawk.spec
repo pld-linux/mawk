@@ -11,7 +11,7 @@ Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
 Source:		ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Patch:		mawk-fix_mawk_path.patch
-Provides:	awk
+Provides:	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

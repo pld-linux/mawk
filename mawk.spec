@@ -47,9 +47,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/mawk
 %{_mandir}/man1/mawk.1*
-
-%changelog
-* Wed May 26 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2.2-12]
-- based on RH spec,
-- spec rewrited in PLD coding style.

@@ -1,7 +1,9 @@
 Summary:	An interpreter for the awk programming language
 Summary(de):	Mikes neuer Posix AWK-Interpretierer
+Summary(es):	Nuevo interpretador (Posix) AWK del Mike
 Summary(fr):	Mike's New/Posix AWK Interpreter : interpréteur AWK
 Summary(pl):	Interpreter jêzyka programowania awk
+Summary(pt_BR):	Novo interpretador (Posix) AWK do Mike
 Summary(tr):	Posix AWK Yorumlayýcýsý
 Name:		mawk
 Version:	1.3.3
@@ -13,7 +15,7 @@ Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Source1:	%{name}.1.pl
-Patch0:		%{name}-fix_mawk_path.patch
+Patch0:		%{name}-fix_%{name}_path.patch
 Patch1:		%{name}-ac-workaround.patch
 Provides:	/bin/awk
 Provides:	awk
@@ -35,6 +37,11 @@ Mawk ist eine Version von awk, einem leistungsfähigen
 Textverarbeitungsprogramm. In bestimmten Bereichen leistet mawk mehr
 als gawk, das Standard-awk-Programm auf Linux.
 
+%description -l es
+Mawk es una versión del awk, que es un fuerte programa procesador de
+texto. En algunas áreas mawk puede superar gawk, que es el programa
+awk padrón del Linux.
+
 %description -l fr
 mawk est une version d'awk, un puissant programme de traitement du
 texte. Dans certains cas, mawk peut être supérieur à gawk, qui est le
@@ -46,6 +53,11 @@ specjalizowanym jêzykiem programowania do szybkiego przetwarzania
 tekstów. Mawk w pewien sposób ulepsza awk i czasem przerasta nawet
 gawk - standardowy interpreter awk-a w Linuksie. Mawk jest zgodny ze
 standardem jêzyka awk opisanym w POSIX 1003.2 (draft 11.3).
+
+%description -l pt_BR
+Mawk é uma versão do awk, que é um poderoso programa processador de
+texto. Em algumas áreas mawk pode superar gawk, que é o programa awk
+padrão do Linux.
 
 %description -l tr
 Mawk, çok güçlü bir metin iþleme programý olan awk'ýn bir sürümüdür.

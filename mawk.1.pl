@@ -349,7 +349,7 @@ za¶ dla ka¿dego rekordu wej¶ciowego pasuj±cego do
 wykonywana jest
 .IR akcja .
 Faktycznie, /\fIr\fR/ jest wyra¿eniem AWK równowa¿nym (\fB$0\fR ~ /\fIr\fR/)
-wszêdzie za wyj±tkiem wyst±pienia po prawej stronie operatora dopasowania
+wszêdzie z wyj±tkiem wyst±pienia po prawej stronie operatora dopasowania
 lub przekazywania do funkcji wbudowanej oczekuj±cej jako argumentu wyra¿enia
 regularnego.
 .PP
@@ -754,7 +754,7 @@ zgodnie z
 Zobacz opis printf() poni¿ej.
 .TP
 .RI \fBsub\fP( r , s , t ")  \fBsub\fP(" r , s )
-Pojedyncze zast±pienie. Takie samo, jak gsub(), za wyj±tkiem tego, ¿e
+Pojedyncze zast±pienie. Takie samo, jak gsub(), z wyj±tkiem tego, ¿e
 wykonywane jest co najwy¿ej jedno zast±pienie.
 .TP
 .RI \fBsubstr\fP( s , i , n ")  \fBsubstr\fP(" s , i )
@@ -1031,7 +1031,7 @@ definiuje <ODSTÊP> jako wyra¿enie regularne
 /[\ \et\en]+/.
 W przeciwnym wypadku
 .I sep
-traktowany jest jako wyra¿enie regularne, za wyj±tkiem tego, ¿e metaznaki
+traktowany jest jako wyra¿enie regularne, z wyj±tkiem tego, ¿e metaznaki
 dla ³añcucha o d³ugo¶ci 1 s± ignorowane, np.
 split(x, A, "*") i split(x, A, /\e*/) s± tym samym.
 .TP
@@ -1058,7 +1058,7 @@ Dane umieszczone w
 wygl±daj±ce na numeryczne otrzymuj± typ liczbowo-³añcuchowy.
 .RE
 .PP
-Podzia³ rekordów na pola dzia³a tak samo, za wyj±tkiem tego, i¿ czê¶ci
+Podzia³ rekordów na pola dzia³a tak samo, z wyj±tkiem tego, i¿ czê¶ci
 wpisywane s± do
 .BR $1 ,
 \fB$2\fR,...,

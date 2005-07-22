@@ -25,6 +25,7 @@ Provides:	awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
+%define		_bindir		/bin
 
 %description
 Mawk is a version of the awk programming language. Awk interprets a
@@ -139,7 +140,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ACKNOWLEDGMENT CHANGES README
 %attr(755,root,root) %{_bindir}/mawk
-%attr(755,root,root) /bin/awk
+%attr(755,root,root) %{_bindir}/awk
 %{_mandir}/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
 %{_examplesdir}/%{name}-%{version}

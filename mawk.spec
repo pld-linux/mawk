@@ -12,12 +12,13 @@ Version:	1.3.3
 Release:	32
 License:	GPL
 Group:		Applications/Text
-Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
+Source0:	ftp://ftp.fu-berlin.de/pub/unix/languages/mawk/%{name}%{version}.tar.gz
 # Source0-md5:	ad46743641924e1234b2bfba92641085
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 Patch1:		%{name}-ac-ac.patch
 Patch2:		%{name}-debian.patch
+Patch3:		%{name}-resolve.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 %{?BOOT:BuildRequires:	glibc-static}
@@ -99,6 +100,7 @@ Wersja awka na bootkietkê.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 autoupdate mawk.ac.m4

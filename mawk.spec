@@ -9,7 +9,7 @@ Summary(tr):	Posix AWK YorumlayЩcЩsЩ
 Summary(uk):	╤нтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.3
-Release:	31
+Release:	32
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
@@ -17,6 +17,7 @@ Source0:	ftp://ftp.whidbey.net/pub/brennan/%{name}%{version}.tar.gz
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 Patch1:		%{name}-ac-ac.patch
+Patch2:		%{name}-debian.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 %{?BOOT:BuildRequires:	glibc-static}
@@ -97,6 +98,7 @@ Wersja awka na bootkietkЙ.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 autoupdate mawk.ac.m4

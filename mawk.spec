@@ -19,6 +19,7 @@ Patch0:		%{name}-fix_%{name}_path.patch
 Patch1:		%{name}-ac-ac.patch
 Patch2:		%{name}-debian.patch
 Patch3:		%{name}-resolve.patch
+Patch4:		%{name}-LDFLAGS.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 %{?BOOT:BuildRequires:	glibc-static}
@@ -101,6 +102,7 @@ Wersja awka na bootkietkê.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 autoupdate mawk.ac.m4
@@ -109,11 +111,14 @@ autoupdate configure.in
 %{__autoconf}
 %configure
 %if %{?BOOT:1}%{!?BOOT:0}
-%{__make} MATHLIB=/usr/lib/libm.a
+%{__make} \
+	MATHLIB=/usr/lib/libm.a \
+	LDFLAGS="%{rpmldflags}"
 mv -f mawk mawk.BOOT
 %{__make} clean
 %endif
-%{__make}
+%{__make} \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

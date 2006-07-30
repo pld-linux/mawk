@@ -1,3 +1,5 @@
+# TODO
+# - BOOT macro to bcond
 Summary:	An interpreter for the awk programming language
 Summary(de):	Mikes neuer Posix AWK-Interpretierer
 Summary(es):	Nuevo interpretador (Posix) AWK del Mike
@@ -112,7 +114,7 @@ autoupdate configure.in
 %configure
 %if %{?BOOT:1}%{!?BOOT:0}
 %{__make} \
-	MATHLIB=/usr/lib/libm.a \
+	MATHLIB=/usr/%{_lib}/libm.a \
 	LDFLAGS="%{rpmldflags}"
 mv -f mawk mawk.BOOT
 %{__make} clean

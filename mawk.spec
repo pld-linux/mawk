@@ -113,13 +113,13 @@ autoupdate configure.in
 %{__autoconf}
 %configure
 %if %{?BOOT:1}%{!?BOOT:0}
-%{__make} \
+%{__make} -j1 \
 	MATHLIB=/usr/%{_lib}/libm.a \
 	LDFLAGS="%{rpmldflags}"
 mv -f mawk mawk.BOOT
 %{__make} clean
 %endif
-%{__make} \
+%{__make} -j1 \
 	LDFLAGS="%{rpmldflags}"
 
 %install

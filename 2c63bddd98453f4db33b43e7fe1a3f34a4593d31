@@ -1,0 +1,8 @@
+- [1.3.3-13]
+- added link to /bin/awk
+- added examples
+- new pl description
+- updated URL
+- fixed Group
+- added Group(pl)
+- added BINDIR to 'make install'

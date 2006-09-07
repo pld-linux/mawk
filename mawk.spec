@@ -1,5 +1,6 @@
-# TODO
-# - BOOT macro to bcond
+# Conditional build:
+%bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
+#
 Summary:	An interpreter for the awk programming language
 Summary(de):	Mikes neuer Posix AWK-Interpretierer
 Summary(es):	Nuevo interpretador (Posix) AWK del Mike
@@ -24,7 +25,7 @@ Patch3:		%{name}-resolve.patch
 Patch4:		%{name}-LDFLAGS.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-%{?BOOT:BuildRequires:	glibc-static}
+%{?with_bootdisk:BuildRequires:	glibc-static}
 Provides:	/bin/awk
 Provides:	awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -112,7 +113,7 @@ autoupdate configure.in
 %{__aclocal}
 %{__autoconf}
 %configure
-%if %{?BOOT:1}%{!?BOOT:0}
+%if %{with bootdisk}
 %{__make} -j1 \
 	MATHLIB=/usr/%{_lib}/libm.a \
 	LDFLAGS="%{rpmldflags}"
@@ -139,7 +140,7 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 
 mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%if %{?BOOT:1}%{!?BOOT:0}
+%if %{with bootdisk}
 install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin
 install mawk.BOOT $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin/awk
 %endif
@@ -156,7 +157,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_mandir}/pl/man1/*
 %{_examplesdir}/%{name}-%{version}
 
-%if %{?BOOT:1}%{!?BOOT:0}
+%if %{with bootdisk}
 %files BOOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/bootdisk/bin/awk

@@ -1,0 +1,3 @@
+- ac-workaround patch for new ac (m4 hanged eating 100% CPU)
+- finished adding pl man page (fixed %files)
+- made BOOT conditional

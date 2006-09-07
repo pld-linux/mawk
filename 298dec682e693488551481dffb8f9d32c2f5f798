@@ -1,0 +1,1 @@
+- removed %doc from examples - all files in %{_examplesdir} are docs implicitly

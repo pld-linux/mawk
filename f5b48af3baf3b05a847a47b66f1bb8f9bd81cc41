@@ -1,0 +1,2 @@
+- Added bcond for statical linking libm (it is smaller than mawk+libm dynamic)
+  ex for bootdisks.. ;-)

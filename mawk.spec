@@ -2,14 +2,14 @@
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
 #
 Summary:	An interpreter for the awk programming language
-Summary(de):	Mikes neuer Posix AWK-Interpretierer
-Summary(es):	Nuevo interpretador (Posix) AWK del Mike
-Summary(fr):	Mike's New/Posix AWK Interpreter : interprИteur AWK
-Summary(pl):	Interpreter jЙzyka programowania awk
-Summary(pt_BR):	Novo interpretador (Posix) AWK do Mike
-Summary(ru):	Интерпретатор языка программирования awk
-Summary(tr):	Posix AWK YorumlayЩcЩsЩ
-Summary(uk):	╤нтерпретатор мови програмування awk
+Summary(de.UTF-8):   Mikes neuer Posix AWK-Interpretierer
+Summary(es.UTF-8):   Nuevo interpretador (Posix) AWK del Mike
+Summary(fr.UTF-8):   Mike's New/Posix AWK Interpreter : interprц╘teur AWK
+Summary(pl.UTF-8):   Interpreter jд≥zyka programowania awk
+Summary(pt_BR.UTF-8):   Novo interpretador (Posix) AWK do Mike
+Summary(ru.UTF-8):   п≤п╫я┌п╣я─п©я─п╣я┌п╟я┌п╬я─ я▐п╥я▀п╨п╟ п©я─п╬пЁя─п╟п╪п╪п╦я─п╬п╡п╟п╫п╦я▐ awk
+Summary(tr.UTF-8):   Posix AWK Yorumlayд╠cд╠sд╠
+Summary(uk.UTF-8):   п├п╫я┌п╣я─п©я─п╣я┌п╟я┌п╬я─ п╪п╬п╡п╦ п©я─п╬пЁя─п╟п╪я┐п╡п╟п╫п╫я▐ awk
 Name:		mawk
 Version:	1.3.3
 Release:	32
@@ -40,64 +40,64 @@ and reformatting. Mawk improves on awk in certain ways and can
 sometimes outperform gawk, the standard awk program for Linux. Mawk
 conforms to the POSIX 1003.2 (draft 11.3) definition of awk.
 
-%description -l de
-Mawk ist eine Version von awk, einem leistungsfДhigen
+%description -l de.UTF-8
+Mawk ist eine Version von awk, einem leistungsfц╓higen
 Textverarbeitungsprogramm. In bestimmten Bereichen leistet mawk mehr
 als gawk, das Standard-awk-Programm auf Linux.
 
-%description -l es
-Mawk es una versiСn del awk, que es un fuerte programa procesador de
-texto. En algunas Аreas mawk puede superar gawk, que es el programa
-awk padrСn del Linux.
+%description -l es.UTF-8
+Mawk es una versiцЁn del awk, que es un fuerte programa procesador de
+texto. En algunas ц║reas mawk puede superar gawk, que es el programa
+awk padrцЁn del Linux.
 
-%description -l fr
+%description -l fr.UTF-8
 mawk est une version d'awk, un puissant programme de traitement du
-texte. Dans certains cas, mawk peut Йtre supИrieur Ю gawk, qui est le
+texte. Dans certains cas, mawk peut ц╙tre supц╘rieur ц═ gawk, qui est le
 programme awk standard sur Linux
 
-%description -l pl
-Mawk jest wersj╠ interpretera jЙzyka programowania awk. Awk jest
-specjalizowanym jЙzykiem programowania do szybkiego przetwarzania
-tekstСw. Mawk w pewien sposСb ulepsza awk i czasem przerasta nawet
+%description -l pl.UTF-8
+Mawk jest wersjд┘ interpretera jд≥zyka programowania awk. Awk jest
+specjalizowanym jд≥zykiem programowania do szybkiego przetwarzania
+tekstцЁw. Mawk w pewien sposцЁb ulepsza awk i czasem przerasta nawet
 gawk - standardowy interpreter awk-a w Linuksie. Mawk jest zgodny ze
-standardem jЙzyka awk opisanym w POSIX 1003.2 (draft 11.3).
+standardem jд≥zyka awk opisanym w POSIX 1003.2 (draft 11.3).
 
-%description -l pt_BR
-Mawk И uma versЦo do awk, que И um poderoso programa processador de
-texto. Em algumas Аreas mawk pode superar gawk, que И o programa awk
-padrЦo do Linux.
+%description -l pt_BR.UTF-8
+Mawk ц╘ uma versцёo do awk, que ц╘ um poderoso programa processador de
+texto. Em algumas ц║reas mawk pode superar gawk, que ц╘ o programa awk
+padrцёo do Linux.
 
-%description -l ru
-Mawk - это версия языка программирования awk, мощного инструмента для
-обработки текста. Mawk имеет улучшенную реализацию некоторых
-возможностей awk и иногда быстрее gawk, стандартной программы awk для
-Linux. Mawk соответствует POSIX 1003.2 (draft 11.3) определению языка
+%description -l ru.UTF-8
+Mawk - я█я┌п╬ п╡п╣я─я│п╦я▐ я▐п╥я▀п╨п╟ п©я─п╬пЁя─п╟п╪п╪п╦я─п╬п╡п╟п╫п╦я▐ awk, п╪п╬я┴п╫п╬пЁп╬ п╦п╫я│я┌я─я┐п╪п╣п╫я┌п╟ п╢п╩я▐
+п╬п╠я─п╟п╠п╬я┌п╨п╦ я┌п╣п╨я│я┌п╟. Mawk п╦п╪п╣п╣я┌ я┐п╩я┐я┤я┬п╣п╫п╫я┐я▌ я─п╣п╟п╩п╦п╥п╟я├п╦я▌ п╫п╣п╨п╬я┌п╬я─я▀я┘
+п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╣п╧ awk п╦ п╦п╫п╬пЁп╢п╟ п╠я▀я│я┌я─п╣п╣ gawk, я│я┌п╟п╫п╢п╟я─я┌п╫п╬п╧ п©я─п╬пЁя─п╟п╪п╪я▀ awk п╢п╩я▐
+Linux. Mawk я│п╬п╬я┌п╡п╣я┌я│я┌п╡я┐п╣я┌ POSIX 1003.2 (draft 11.3) п╬п©я─п╣п╢п╣п╩п╣п╫п╦я▌ я▐п╥я▀п╨п╟
 awk.
 
-%description -l tr
-Mawk, Гok gЭГlЭ bir metin iЧleme programЩ olan awk'Щn bir sЭrЭmЭdЭr.
-BazЩ durumlarda Linux un standart awk programЩ olan gawk'dan daha
-ЭstЭndЭr.
+%description -l tr.UTF-8
+Mawk, ц╖ok gц╪ц╖lц╪ bir metin iе÷leme programд╠ olan awk'д╠n bir sц╪rц╪mц╪dц╪r.
+Bazд╠ durumlarda Linux un standart awk programд╠ olan gawk'dan daha
+ц╪stц╪ndц╪r.
 
-%description -l uk
-Mawk - це верс╕я мови програмування awk, потужного ╕нструменту для
-обробки тексту. Mawk ма╓ покращену реал╕зац╕ю деяких можливостей awk ╕
-╕нод╕ швидший за gawk, стандартну програму awk для Linux. Mawk
-в╕дпов╕да╓ POSIX 1003.2 (draft 11.3) визначенню мови awk.
+%description -l uk.UTF-8
+Mawk - я├п╣ п╡п╣я─я│я√я▐ п╪п╬п╡п╦ п©я─п╬пЁя─п╟п╪я┐п╡п╟п╫п╫я▐ awk, п©п╬я┌я┐п╤п╫п╬пЁп╬ я√п╫я│я┌я─я┐п╪п╣п╫я┌я┐ п╢п╩я▐
+п╬п╠я─п╬п╠п╨п╦ я┌п╣п╨я│я┌я┐. Mawk п╪п╟я■ п©п╬п╨я─п╟я┴п╣п╫я┐ я─п╣п╟п╩я√п╥п╟я├я√я▌ п╢п╣я▐п╨п╦я┘ п╪п╬п╤п╩п╦п╡п╬я│я┌п╣п╧ awk я√
+я√п╫п╬п╢я√ я┬п╡п╦п╢я┬п╦п╧ п╥п╟ gawk, я│я┌п╟п╫п╢п╟я─я┌п╫я┐ п©я─п╬пЁя─п╟п╪я┐ awk п╢п╩я▐ Linux. Mawk
+п╡я√п╢п©п╬п╡я√п╢п╟я■ POSIX 1003.2 (draft 11.3) п╡п╦п╥п╫п╟я┤п╣п╫п╫я▌ п╪п╬п╡п╦ awk.
 
 %package BOOT
 Summary:	An interpreter for the awk programming language - BOOT
-Summary(de):	Mikes neuer Posix AWK-Interpretierer - BOOT
-Summary(fr):	Mike's New/Posix AWK Interpreter : interprИteur AWK - BOOT
-Summary(pl):	Interpreter jЙzyka programowania awk - BOOT
-Summary(tr):	Posix AWK YorumlayЩcЩsЩ - BOOT
+Summary(de.UTF-8):   Mikes neuer Posix AWK-Interpretierer - BOOT
+Summary(fr.UTF-8):   Mike's New/Posix AWK Interpreter : interprц╘teur AWK - BOOT
+Summary(pl.UTF-8):   Interpreter jд≥zyka programowania awk - BOOT
+Summary(tr.UTF-8):   Posix AWK Yorumlayд╠cд╠sд╠ - BOOT
 Group:		Applications/Text
 
 %description BOOT
 Bootdisk awk version.
 
-%description BOOT -l pl
-Wersja awka na bootkietkЙ.
+%description BOOT -l pl.UTF-8
+Wersja awka na bootkietkд≥.
 
 %prep
 %setup -q

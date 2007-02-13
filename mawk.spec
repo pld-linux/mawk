@@ -2,14 +2,14 @@
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
 #
 Summary:	An interpreter for the awk programming language
-Summary(de.UTF-8):   Mikes neuer Posix AWK-Interpretierer
-Summary(es.UTF-8):   Nuevo interpretador (Posix) AWK del Mike
-Summary(fr.UTF-8):   Mike's New/Posix AWK Interpreter : interpréteur AWK
-Summary(pl.UTF-8):   Interpreter języka programowania awk
-Summary(pt_BR.UTF-8):   Novo interpretador (Posix) AWK do Mike
-Summary(ru.UTF-8):   Интерпретатор языка программирования awk
-Summary(tr.UTF-8):   Posix AWK Yorumlayıcısı
-Summary(uk.UTF-8):   Інтерпретатор мови програмування awk
+Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer
+Summary(es.UTF-8):	Nuevo interpretador (Posix) AWK del Mike
+Summary(fr.UTF-8):	Mike's New/Posix AWK Interpreter : interpréteur AWK
+Summary(pl.UTF-8):	Interpreter języka programowania awk
+Summary(pt_BR.UTF-8):	Novo interpretador (Posix) AWK do Mike
+Summary(ru.UTF-8):	Интерпретатор языка программирования awk
+Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı
+Summary(uk.UTF-8):	Інтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.3
 Release:	32
@@ -87,10 +87,10 @@ Mawk - це версія мови програмування awk, потужно
 
 %package BOOT
 Summary:	An interpreter for the awk programming language - BOOT
-Summary(de.UTF-8):   Mikes neuer Posix AWK-Interpretierer - BOOT
-Summary(fr.UTF-8):   Mike's New/Posix AWK Interpreter : interpréteur AWK - BOOT
-Summary(pl.UTF-8):   Interpreter języka programowania awk - BOOT
-Summary(tr.UTF-8):   Posix AWK Yorumlayıcısı - BOOT
+Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer - BOOT
+Summary(fr.UTF-8):	Mike's New/Posix AWK Interpreter : interpréteur AWK - BOOT
+Summary(pl.UTF-8):	Interpreter języka programowania awk - BOOT
+Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı - BOOT
 Group:		Applications/Text
 
 %description BOOT

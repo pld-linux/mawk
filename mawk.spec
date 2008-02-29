@@ -25,6 +25,7 @@ Patch3:		%{name}-resolve.patch
 Patch4:		%{name}-LDFLAGS.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	bison
 %{?with_bootdisk:BuildRequires:	glibc-static}
 Provides:	/bin/awk
 Provides:	awk

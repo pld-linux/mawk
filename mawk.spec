@@ -11,12 +11,14 @@ Summary(ru.UTF-8):	Интерпретатор языка программиро�
 Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı
 Summary(uk.UTF-8):	Інтерпретатор мови програмування awk
 Name:		mawk
+%define	snap	20100625
 Version:	1.3.4
-Release:	0.1
+Release:	0.%{snap}.1
 License:	GPL
 Group:		Applications/Text
-Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}.tgz
-# Source0-md5:	b1d27324ae80302452d0fa0c98447b65
+# Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}.tgz
+Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz
+# Source0-md5:	447e7c322fa1e58141f5085bae87351f
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 URL:		http://invisible-island.net/mawk/mawk.html
@@ -98,7 +100,7 @@ Bootdisk awk version.
 Wersja awka na bootkietkę.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{snap}
 %patch0 -p1
 
 %build

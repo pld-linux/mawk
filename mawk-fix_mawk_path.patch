@@ -1,18 +1,72 @@
-diff -Nru mawk-1.3.3/examples/ct_length.awk mawk-1.3.3.new/examples/ct_length.awk
---- mawk-1.3.3/examples/ct_length.awk	Sat Jul  3 20:58:46 1993
-+++ mawk-1.3.3.new/examples/ct_length.awk	Wed Feb  9 07:56:44 2000
+diff -urN mawk-1.3.4.org/examples/ct_length.awk mawk-1.3.4/examples/ct_length.awk
+--- mawk-1.3.4.org/examples/ct_length.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/ct_length.awk	2010-09-30 21:51:50.144198850 +0200
 @@ -1,4 +1,4 @@
--#!/usr/local/bin/mawk -f
+-#!/usr/bin/mawk -f
 +#!/bin/mawk -f
  
  #  ct_length.awk
  #
-diff -Nru mawk-1.3.3/examples/hcal mawk-1.3.3.new/examples/hcal
---- mawk-1.3.3/examples/hcal	Sun Aug 25 20:45:47 1996
-+++ mawk-1.3.3.new/examples/hcal	Wed Feb  9 07:56:55 2000
+diff -urN mawk-1.3.4.org/examples/deps.awk mawk-1.3.4/examples/deps.awk
+--- mawk-1.3.4.org/examples/deps.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/deps.awk	2010-09-30 21:51:50.144198850 +0200
 @@ -1,4 +1,4 @@
--#!/usr/local/bin/mawk -We
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ 
+ # find include dependencies in C source
+ #
+diff -urN mawk-1.3.4.org/examples/eatc.awk mawk-1.3.4/examples/eatc.awk
+--- mawk-1.3.4.org/examples/eatc.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/eatc.awk	2010-09-30 21:51:50.144198850 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ 
+ #  eatc.awk
+ #  another program to remove comments
+diff -urN mawk-1.3.4.org/examples/gdecl.awk mawk-1.3.4/examples/gdecl.awk
+--- mawk-1.3.4.org/examples/gdecl.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/gdecl.awk	2010-09-30 21:51:50.144198850 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk
++#!/bin/mawk
+ 
+ # parse a C declaration by recursive descent
+ # 
+diff -urN mawk-1.3.4.org/examples/hcal mawk-1.3.4/examples/hcal
+--- mawk-1.3.4.org/examples/hcal	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/hcal	2010-09-30 21:51:50.147532449 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -We
 +#!/bin/mawk -We
+ 
  # edit the above to be the full pathname of 'mawk'
  # @(#) hcal - v01.00.02 - Tue Feb 27 21:21:21 EST 1996
- # @(#) prints a 3-month (highlighted) calendar centered on the target month
+diff -urN mawk-1.3.4.org/examples/nocomment.awk mawk-1.3.4/examples/nocomment.awk
+--- mawk-1.3.4.org/examples/nocomment.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/nocomment.awk	2010-09-30 21:51:50.147532449 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ 
+ # remove C comments  from a list of files
+ # using a comment as the record separator
+diff -urN mawk-1.3.4.org/examples/primes.awk mawk-1.3.4/examples/primes.awk
+--- mawk-1.3.4.org/examples/primes.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/primes.awk	2010-09-30 21:51:50.147532449 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ 
+ # primes.awk
+ #
+diff -urN mawk-1.3.4.org/examples/qsort.awk mawk-1.3.4/examples/qsort.awk
+--- mawk-1.3.4.org/examples/qsort.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4/examples/qsort.awk	2010-09-30 21:51:50.147532449 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ 
+ # qsort text files
+ #

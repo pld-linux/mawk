@@ -11,18 +11,15 @@ Summary(ru.UTF-8):	Интерпретатор языка программиро�
 Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı
 Summary(uk.UTF-8):	Інтерпретатор мови програмування awk
 Name:		mawk
-Version:	1.3.3
-Release:	33
+Version:	1.3.4
+Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	ftp://ftp.fu-berlin.de/pub/unix/languages/mawk/%{name}%{version}.tar.gz
-# Source0-md5:	ad46743641924e1234b2bfba92641085
+Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}.tgz
+# Source0-md5:	b1d27324ae80302452d0fa0c98447b65
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
-Patch1:		%{name}-ac-ac.patch
-Patch2:		%{name}-debian.patch
-Patch3:		%{name}-resolve.patch
-Patch4:		%{name}-LDFLAGS.patch
+URL:		http://invisible-island.net/mawk/mawk.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
@@ -103,14 +100,8 @@ Wersja awka na bootkietkę.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
-autoupdate mawk.ac.m4
-autoupdate configure.in
 %{__aclocal}
 %{__autoconf}
 %configure

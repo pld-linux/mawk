@@ -1,6 +1,8 @@
 # Conditional build:
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
-#
+
+%define	snap	20100625
+
 Summary:	An interpreter for the awk programming language
 Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer
 Summary(es.UTF-8):	Nuevo interpretador (Posix) AWK del Mike
@@ -11,7 +13,6 @@ Summary(ru.UTF-8):	Интерпретатор языка программиро�
 Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı
 Summary(uk.UTF-8):	Інтерпретатор мови програмування awk
 Name:		mawk
-%define	snap	20100625
 Version:	1.3.4
 Release:	0.%{snap}.1
 License:	GPL
@@ -109,7 +110,7 @@ Wersja awka na bootkietkę.
 %configure
 %if %{with bootdisk}
 %{__make} -j1 \
-	MATHLIB=/usr/%{_lib}/libm.a \
+	MATHLIB=%{_prefix}/%{_lib}/libm.a \
 	LDFLAGS="%{rpmldflags}"
 mv -f mawk mawk.BOOT
 %{__make} clean

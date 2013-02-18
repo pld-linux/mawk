@@ -1,7 +1,8 @@
 # Conditional build:
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
+%bcond_without	tests
 
-%define	snap	20100625
+%define	snap	20121209
 
 Summary:	An interpreter for the awk programming language
 Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer
@@ -19,7 +20,7 @@ License:	GPL
 Group:		Applications/Text
 # Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}.tgz
 Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz
-# Source0-md5:	447e7c322fa1e58141f5085bae87351f
+# Source0-md5:	28de63bff452e031728509421087f20b
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 URL:		http://invisible-island.net/mawk/mawk.html
@@ -105,8 +106,6 @@ Wersja awka na bootkietkę.
 %patch0 -p1
 
 %build
-%{__aclocal}
-%{__autoconf}
 %configure
 %if %{with bootdisk}
 %{__make} -j1 \
@@ -117,6 +116,8 @@ mv -f mawk mawk.BOOT
 %endif
 %{__make} -j1 \
 	LDFLAGS="%{rpmldflags}"
+
+%{?with_tests:%{__make} -j1 check}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -133,7 +134,7 @@ echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/man1/awk.1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1/mawk.1
 echo ".so mawk.1" > $RPM_BUILD_ROOT%{_mandir}/pl/man1/awk.1
 
-mv -f examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %if %{with bootdisk}
 install -d $RPM_BUILD_ROOT%{_libdir}/bootdisk/bin

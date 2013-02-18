@@ -29,8 +29,8 @@ diff -urN mawk-1.3.4.org/examples/gdecl.awk mawk-1.3.4/examples/gdecl.awk
 --- mawk-1.3.4.org/examples/gdecl.awk	2008-09-09 22:52:55.000000000 +0200
 +++ mawk-1.3.4/examples/gdecl.awk	2010-09-30 21:51:50.144198850 +0200
 @@ -1,4 +1,4 @@
--#!/usr/bin/mawk
-+#!/bin/mawk
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
  
  # parse a C declaration by recursive descent
  # 

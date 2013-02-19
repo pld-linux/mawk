@@ -105,7 +105,9 @@ Wersja awka na bootkietkę.
 %patch0 -p1
 
 %build
-%configure
+%configure \
+	 --enable-init-srand
+
 %if %{with bootdisk}
 %{__make} -j1 \
 	MATHLIB=%{_prefix}/%{_lib}/libm.a \

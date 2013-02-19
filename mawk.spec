@@ -2,7 +2,7 @@
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
 %bcond_without	tests
 
-%define	snap	20121209
+%define	snap	20130219
 
 Summary:	An interpreter for the awk programming language
 Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer
@@ -18,9 +18,8 @@ Version:	1.3.4
 Release:	0.%{snap}.1
 License:	GPL
 Group:		Applications/Text
-# Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}.tgz
 Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz
-# Source0-md5:	28de63bff452e031728509421087f20b
+# Source0-md5:	5106dcce3988b86cb104a06c1070ce81
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 URL:		http://invisible-island.net/mawk/mawk.html

@@ -3,7 +3,7 @@
 %bcond_without	tests
 
 %define	snap	20131226
-%define	rel	1
+%define	rel	2
 
 Summary:	An interpreter for the awk programming language
 Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer

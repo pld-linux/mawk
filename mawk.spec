@@ -3,6 +3,7 @@
 %bcond_without	tests
 
 %define	snap	20131226
+%define	rel	1
 
 Summary:	An interpreter for the awk programming language
 Summary(de.UTF-8):	Mikes neuer Posix AWK-Interpretierer
@@ -15,7 +16,7 @@ Summary(tr.UTF-8):	Posix AWK Yorumlayıcısı
 Summary(uk.UTF-8):	Інтерпретатор мови програмування awk
 Name:		mawk
 Version:	1.3.4
-Release:	0.%{snap}.1
+Release:	0.%{snap}.%{rel}
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz

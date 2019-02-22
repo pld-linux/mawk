@@ -2,7 +2,7 @@
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
 %bcond_without	tests
 
-%define	snap	20160930
+%define	snap	20171017
 %define	rel	1
 
 Summary:	An interpreter for the awk programming language
@@ -20,7 +20,7 @@ Release:	0.%{snap}.%{rel}
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz
-# Source0-md5:	767a192e1cdf69bdbfb9e8183f88306d
+# Source0-md5:	6de7560406cd9836335a7297bb910e08
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
 URL:		http://invisible-island.net/mawk/mawk.html

@@ -105,6 +105,8 @@ Wersja awka na bootkietkę.
 %setup -q -n %{name}-%{version}-%{snap}
 %patch0 -p1
 
+%{__sed} -i -e '1s,/usr/bin/awk,/bin/awk,' examples/decl.awk
+
 %build
 %configure \
 	 --enable-init-srand

@@ -2,7 +2,7 @@
 %bcond_with	bootdisk		# build bootdisk version (linked with glibc-static)
 %bcond_without	tests
 
-%define	snap	20200120
+%define	snap	20240123
 %define	rel	1
 
 Summary:	An interpreter for the awk programming language
@@ -19,11 +19,11 @@ Version:	1.3.4
 Release:	0.%{snap}.%{rel}
 License:	GPL
 Group:		Applications/Text
-Source0:	ftp://ftp.invisible-island.net/mawk/%{name}-%{version}-%{snap}.tgz
-# Source0-md5:	d48752f402d7371d9eb5f68de3da05d4
+Source0:	https://invisible-island.net/archives/mawk/%{name}-%{version}-%{snap}.tgz
+# Source0-md5:	90376fbf8faf6e63be373ccad93504ba
 Source1:	%{name}.1.pl
 Patch0:		%{name}-fix_%{name}_path.patch
-URL:		http://invisible-island.net/mawk/mawk.html
+URL:		https://invisible-island.net/mawk/mawk.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
@@ -129,7 +129,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1},%{_examplesdir}/
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
 
 ln -sf mawk $RPM_BUILD_ROOT%{_bindir}/awk
@@ -153,8 +153,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc ACKNOWLEDGMENT CHANGES README
 %attr(755,root,root) %{_bindir}/mawk
 %attr(755,root,root) %{_bindir}/awk
-%{_mandir}/man1/*
-%lang(pl) %{_mandir}/pl/man1/*
+%{_mandir}/man1/awk.1*
+%{_mandir}/man1/mawk.1*
+%{_mandir}/man7/mawk-arrays.7*
+%{_mandir}/man7/mawk-code.7*
+%lang(pl) %{_mandir}/pl/man1/awk.1*
+%lang(pl) %{_mandir}/pl/man1/mawk.1*
 %{_examplesdir}/%{name}-%{version}
 
 %if %{with bootdisk}

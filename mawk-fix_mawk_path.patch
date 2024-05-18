@@ -1,72 +1,81 @@
-diff -urN mawk-1.3.4.org/examples/ct_length.awk mawk-1.3.4/examples/ct_length.awk
---- mawk-1.3.4.org/examples/ct_length.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/ct_length.awk	2010-09-30 21:51:50.144198850 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/ct_length.awk mawk-1.3.4-20240123/examples/ct_length.awk
+--- mawk-1.3.4-20240123.orig/examples/ct_length.awk	2020-09-19 16:49:10.000000000 +0200
++++ mawk-1.3.4-20240123/examples/ct_length.awk	2024-05-18 12:58:43.543853813 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/mawk -f
 +#!/bin/mawk -f
+ # $MawkId: ct_length.awk,v 1.3 2020/09/19 14:49:10 tom Exp $
  
  #  ct_length.awk
- #
-diff -urN mawk-1.3.4.org/examples/deps.awk mawk-1.3.4/examples/deps.awk
---- mawk-1.3.4.org/examples/deps.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/deps.awk	2010-09-30 21:51:50.144198850 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/decl.awk mawk-1.3.4-20240123/examples/decl.awk
+--- mawk-1.3.4-20240123.orig/examples/decl.awk	2020-09-19 15:46:31.000000000 +0200
++++ mawk-1.3.4-20240123/examples/decl.awk	2024-05-18 12:58:12.743403900 +0200
 @@ -1,4 +1,4 @@
--#!/usr/bin/mawk -f
-+#!/bin/mawk -f
- 
- # find include dependencies in C source
- #
-diff -urN mawk-1.3.4.org/examples/eatc.awk mawk-1.3.4/examples/eatc.awk
---- mawk-1.3.4.org/examples/eatc.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/eatc.awk	2010-09-30 21:51:50.144198850 +0200
-@@ -1,4 +1,4 @@
--#!/usr/bin/mawk -f
-+#!/bin/mawk -f
- 
- #  eatc.awk
- #  another program to remove comments
-diff -urN mawk-1.3.4.org/examples/gdecl.awk mawk-1.3.4/examples/gdecl.awk
---- mawk-1.3.4.org/examples/gdecl.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/gdecl.awk	2010-09-30 21:51:50.144198850 +0200
-@@ -1,4 +1,4 @@
--#!/usr/bin/mawk -f
-+#!/bin/mawk -f
+-#!/usr/bin/awk -f
++#!/bin/awk -f
+ # $MawkId: decl.awk,v 1.12 2020/09/19 13:46:31 tom Exp $
  
  # parse a C declaration by recursive descent
- # 
-diff -urN mawk-1.3.4.org/examples/hcal mawk-1.3.4/examples/hcal
---- mawk-1.3.4.org/examples/hcal	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/hcal	2010-09-30 21:51:50.147532449 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/deps.awk mawk-1.3.4-20240123/examples/deps.awk
+--- mawk-1.3.4-20240123.orig/examples/deps.awk	2023-10-31 23:58:49.000000000 +0100
++++ mawk-1.3.4-20240123/examples/deps.awk	2024-05-18 12:58:51.511970207 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ # $MawkId: deps.awk,v 1.4 2023/10/31 22:58:49 tom Exp $
+ # vile: notab ts=4 sw=4
+ 
+diff -urN mawk-1.3.4-20240123.orig/examples/eatc.awk mawk-1.3.4-20240123/examples/eatc.awk
+--- mawk-1.3.4-20240123.orig/examples/eatc.awk	2020-09-19 13:51:23.000000000 +0200
++++ mawk-1.3.4-20240123/examples/eatc.awk	2024-05-18 12:58:58.040065566 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ # $MawkId: eatc.awk,v 1.3 2020/09/19 11:51:23 tom Exp $
+ #  eatc.awk
+ #  another program to remove comments
+diff -urN mawk-1.3.4-20240123.orig/examples/gdecl.awk mawk-1.3.4-20240123/examples/gdecl.awk
+--- mawk-1.3.4-20240123.orig/examples/gdecl.awk	2020-09-19 16:04:25.000000000 +0200
++++ mawk-1.3.4-20240123/examples/gdecl.awk	2024-05-18 12:59:06.284185993 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/mawk -f
++#!/bin/mawk -f
+ # $MawkId: gdecl.awk,v 1.6 2020/09/19 14:04:25 tom Exp $
+ 
+ # parse a C declaration by recursive descent
+diff -urN mawk-1.3.4-20240123.orig/examples/hcal mawk-1.3.4-20240123/examples/hcal
+--- mawk-1.3.4-20240123.orig/examples/hcal	2020-09-25 00:05:19.000000000 +0200
++++ mawk-1.3.4-20240123/examples/hcal	2024-05-18 12:59:11.696265048 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/mawk -We
 +#!/bin/mawk -We
+ # $MawkId: hcal,v 1.6 2020/09/24 22:05:19 tom Exp $
+ # vile:ts=4 sw=4
  
- # edit the above to be the full pathname of 'mawk'
- # @(#) hcal - v01.00.02 - Tue Feb 27 21:21:21 EST 1996
-diff -urN mawk-1.3.4.org/examples/nocomment.awk mawk-1.3.4/examples/nocomment.awk
---- mawk-1.3.4.org/examples/nocomment.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/nocomment.awk	2010-09-30 21:51:50.147532449 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/nocomment.awk mawk-1.3.4-20240123/examples/nocomment.awk
+--- mawk-1.3.4-20240123.orig/examples/nocomment.awk	2020-09-19 15:02:14.000000000 +0200
++++ mawk-1.3.4-20240123/examples/nocomment.awk	2024-05-18 12:59:20.616395351 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/mawk -f
 +#!/bin/mawk -f
+ # $MawkId: nocomment.awk,v 1.3 2020/09/19 13:02:14 tom Exp $
  
  # remove C comments  from a list of files
- # using a comment as the record separator
-diff -urN mawk-1.3.4.org/examples/primes.awk mawk-1.3.4/examples/primes.awk
---- mawk-1.3.4.org/examples/primes.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/primes.awk	2010-09-30 21:51:50.147532449 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/primes.awk mawk-1.3.4-20240123/examples/primes.awk
+--- mawk-1.3.4-20240123.orig/examples/primes.awk	2008-09-09 22:52:55.000000000 +0200
++++ mawk-1.3.4-20240123/examples/primes.awk	2024-05-18 12:57:46.007013358 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/mawk -f
 +#!/bin/mawk -f
  
  # primes.awk
  #
-diff -urN mawk-1.3.4.org/examples/qsort.awk mawk-1.3.4/examples/qsort.awk
---- mawk-1.3.4.org/examples/qsort.awk	2008-09-09 22:52:55.000000000 +0200
-+++ mawk-1.3.4/examples/qsort.awk	2010-09-30 21:51:50.147532449 +0200
+diff -urN mawk-1.3.4-20240123.orig/examples/qsort.awk mawk-1.3.4-20240123/examples/qsort.awk
+--- mawk-1.3.4-20240123.orig/examples/qsort.awk	2020-09-19 16:20:45.000000000 +0200
++++ mawk-1.3.4-20240123/examples/qsort.awk	2024-05-18 12:59:28.276507247 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/mawk -f
 +#!/bin/mawk -f
+ # $MawkId: qsort.awk,v 1.4 2020/09/19 14:20:45 tom Exp $
  
  # qsort text files
- #

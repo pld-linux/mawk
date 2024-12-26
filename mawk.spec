@@ -103,7 +103,7 @@ Wersja awka na bootkietkę.
 
 %prep
 %setup -q -n %{name}-%{version}-%{snap}
-%patch0 -p1
+%patch -P0 -p1
 
 %{__sed} -i -e '1s,/usr/bin/awk,/bin/awk,' examples/decl.awk
 
